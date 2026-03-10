@@ -43,17 +43,19 @@
                         Joe
                         <span class="text-primary">Payne</span>
                     </h1>
-                    <div class="subheading mb-5">
-                        <span class="text-primary">joepayne [at] umich.edu</span>
-                    </div>
-                    <p class="lead mb-5">
+                    <div class="subheading mb-5"><span class="text-primary">joepayne@umich.edu</span></div>
+                    <p class="lead mb-3">
                         I'm currently seeking robotics software engineer, applied scientist, research scientist, and robotics engineer roles. Most recently, I was a senior robotics software engineer at <a href="https://www.relativityspace.com/">Relativity Space</a> working on additive manufacturing technology development.
+                    </p>
+                    <p class="lead mb-5">
                         Prior to that, I completed my PhD in mechanical engineering from Carnegie Mellon University advised by professor Aaron Johnson in the <a href="https://www.robomechanics.net">Robomechanics Lab</a>.
                         My doctoral work focused on state estimation for legged robots, specifically what happens during contact events such as foot touchdown during locomotion. The impulsive nature of these events creates nonsmooth and potentially discontinuous dynamics which can cause many standard algorithms for control and state estimation to underperform or simply fail.
+                    </p>
                     <div class="social-icons">
+                        <a class="social-icon" href="mailto:joepayne@umich.edu"><i class="fa fa-envelope"></i></a>
                         <a class="social-icon" href="https://www.linkedin.com/in/joe-payne-15049341/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/jjoepayne"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="assets/pdfs/JoePayneResume.pdf"><i class="fa fa-file-pdf"></i></a>
+                        <a class="social-icon" href="assets/pdfs/JoePayneResume.pdf"><i class="fa-regular fa-file-lines"></i></a>
                         <a class="social-icon" href="https://youtube.com/@Bouldest1"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
@@ -68,9 +70,14 @@
                             <h3 class="mb-0">Filtering on Hybrid Systems</h3>
                             <p>This project focuses on the mathematical properties of hybrid systems with state driven mode transitions (such as contact dynamics in legged robots). The goal is to understand how uncertainty evolves in hybrid systems to better estimate current state. The first paper on this topic was published in <a href="https://doi.org/10.1016/j.automatica.2021.109752">Automatica</a>, a preprint version can also be found on <a href="https://arxiv.org/abs/2007.12233">arXiv</a>. The sequel paper which focuses on interacting with uncertain guards appeared at <a href="https://ieeexplore.ieee.org/document/9981218">IROS 2022</a> and a preprint can be found on <a href="https://arxiv.org/abs/2202.12729">arXiv</a>.
                         </p>
-                        <p>
-                            <img src="assets/img/salt_movie.gif">
-                        </p>
+                        <div style="margin-top:1.5rem;">
+                            <div id="saltation-canvas" style="overflow:hidden;"></div>
+                            <div style="display:flex; align-items:center; gap:12px; margin-top:10px; flex-wrap:wrap;">
+                                <label style="font-size:0.9rem; font-weight:600; color:#555;">Vertical velocity (V<sub>y</sub>):</label>
+                                <div id="saltation-vy"></div>
+                            </div>
+                            <p style="font-size:0.85rem; color:#888; margin-top:6px; margin-bottom:0;">Click and drag on the left side of the canvas to sample an initial distribution. The slider can be used to adjust the vector field in the first mode.</p>
+                        </div>
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -82,7 +89,8 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">FlamingoBot</h3>
-                            <p>This was a robot created for the class <a href="https://www.andrew.cmu.edu/user/amj1/classes/robotdesign.html">Robot Design and Experiementation</a>. The idea behind the robot is that many current legged robots consume a great deal of energy just to remain in a stationary upright position. In response to this, we took inspiration from the flamingo to reduce the energy to remain standing to zero while on a flat surface. We also made an <a href="https://www.youtube.com/watch?v=B2_hNeDmH9U">overly dramatic video</a> on the robot.</p>
+                            <p>This was a robot created for the class <a href="https://www.andrew.cmu.edu/user/amj1/classes/robotdesign.html">Robot Design and Experimentation</a>. The idea behind the robot is that many current legged robots consume a great deal of energy just to remain in a stationary upright position. In response to this, we took inspiration from the flamingo to reduce the energy to remain standing to zero while on a flat surface. We also made an <a href="https://www.youtube.com/watch?v=B2_hNeDmH9U">overly dramatic video</a> on the robot.</p>
+                            <video src="assets/video/flamingobot_walking_sim.mp4" autoplay loop muted playsinline style="max-width:100%;"></video>
                         </div>
                     </div>
                 </div>
@@ -95,20 +103,26 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0"><a href="https://www.youtube.com/watch?v=8HJ2zbg3W3Q">State Estimation for Hybrid Systems with Uncertain Guards</a></h3>
-                            <p>This talk discusses the extention of saltation matrices to the consideration of uncertainty in the system model. This includes uncertainty in the guard location, which could take the form of unknown ground height for a legged robot, and uncertainty in reset map parameters, such as an unknown coefficient of restitution in an impact system. This talk was presented at IROS 2022.</p>
+                            <div class="d-md-none mb-2"><span class="text-primary">IROS 2022</span></div>
+                            <p>This talk discusses the extention of saltation matrices to the consideration of uncertainty in the system model. This includes uncertainty in the guard location, which could take the form of unknown ground height for a legged robot, and uncertainty in reset map parameters, such as an unknown coefficient of restitution in an impact system.</p>
                         </div>
+                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">IROS 2022</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0"><a href="https://mediaspace.wisc.edu/media/DW22_Payne%2C%20J.%20Joe%20-%20June%2015th%202022%2C%209%3A32%3A43%20pm/1_ps8wgu5u">Saltation Matrices and Why You Should Care</a></h3>
-                            <p>This talk covers the fundamentals of the saltation matrix, including a brief geometric derivation and how it can be applied when adapting smooth algorithms to hybrid dynamical systems. This was presented at Dynamic Walking 2022.</p>
+                            <div class="d-md-none mb-2"><span class="text-primary">Dynamic Walking 2022</span></div>
+                            <p>This talk covers the fundamentals of the saltation matrix, including a brief geometric derivation and how it can be applied when adapting smooth algorithms to hybrid dynamical systems.</p>
                         </div>
+                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">Dynamic Walking 2022</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0"><a href="https://www.youtube.com/watch?v=vHWiVu242vc">FlamingoBot: A Zero Energy Standing Bipedal Robot</a></h3>
-                            <p>This talk, jointly presented with my collaborator <a href="https://nathanjkong.wordpress.com/">Nathan Kong</a>, introduces FlamingoBot, a robot which we designed to be able to remain in an upright standing position with no required motor torques. This design was created to save energy in robots which spend large portions of their operating times standing still. This was presented at Dynamic Walking 2019.</p>
+                            <div class="d-md-none mb-2"><span class="text-primary">Dynamic Walking 2019</span></div>
+                            <p>This talk, jointly presented with my collaborator <a href="https://nathanjkong.wordpress.com/">Nathan Kong</a>, introduces FlamingoBot, a robot which we designed to be able to remain in an upright standing position with no required motor torques. This design was created to save energy in robots which spend large portions of their operating times standing still.</p>
                         </div>
+                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">Dynamic Walking 2019</span></div>
                     </div>
                 </div>
             </section>
@@ -121,17 +135,19 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Dynamic Systems and Controls</h3>
                             <div class="subheading mb-3">Mechanical Engineering 352</div>
+                            <div class="d-md-none mb-2"><span class="text-primary">Winter 2021 · TA</span></div>
                             <p>The second class in dynamics for MechE undergrads. The main focus is on frequency domain analysis - transfer functions, bode plots, root loci, etc. It briefly introduces the concept of feedback control.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Winter 2021 · TA</span></div>
+                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">Winter 2021 · TA</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Dynamics</h3>
                             <div class="subheading mb-3">Mechanical Engineering 351</div>
+                            <div class="d-md-none mb-2"><span class="text-primary">Fall 2019 · TA</span></div>
                             <p>The first class in dynamics for MechE undergrads. It deals primarily with force and energy methods for creating equations of motion for dynamic systems.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Fall 2019 · TA</span></div>
+                        <div class="flex-shrink-0 d-none d-md-block"><span class="text-primary">Fall 2019 · TA</span></div>
                     </div>
                 </div>
             </section>
@@ -142,7 +158,7 @@
                     <h2 class="mb-5">Interests</h2>
                     <p>Outside of work, you can find me <a href="https://www.youtube.com/@bouldest1">rock climbing all over the world</a>. I'm primarily a boulderer, but can occasionally be convinced to do some sport climbing. I am also a big fan of basically any board sport: snowboarding, skateboarding, surfing, wakeboarding, etc!</p>
                     <p>
-                        <img src="assets/img/Interests.jpeg" width=100% height=auto>
+                        <img src="assets/img/Interests.jpeg" width=100% height=auto alt="A collage of action shots of me rock climbing, skateboarding, and snowboarding">
                     </p>    
                     <p class="mb-0">For less action-heavy activities, I try to do a lot of reading. I primarily read literary fiction, but occasionally read essay collections or spy novels. Right now, I can't recommend <a href="https://bookshop.org/books/the-overstory/9780393356687">The Overstory</a>, <a href="https://bookshop.org/books/american-spy/9780812988284">American Spy</a>, and <a href="https://bookshop.org/books/go-ahead-in-the-rain-notes-to-a-tribe-called-quest/9781477316481">Go Ahead in the Rain</a> enough! I also spend a lot of time <a href="https://letterboxd.com/joe_climbs/">watching movies</a>. Some of my favorites are Scream, Poor Things, Banshees of Inisherin, and John Wick.</p>
                 </div>
@@ -156,5 +172,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Saltation simulation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+        <script src="assets/js/saltation-sim.js"></script>
     </body>
 </html>

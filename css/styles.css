@@ -164,7 +164,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #BF77F6;
+  color: #7B2FBE;
   text-decoration: underline;
 }
 
@@ -10111,4 +10111,9 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+/* Saltation simulation slider — accent-color set inline via JS for timing reasons */
+#saltation-vy input[type=range] {
+  accent-color: #3366CC;
 }
