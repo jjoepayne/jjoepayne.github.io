@@ -403,23 +403,26 @@ new p5((p) => {
   };
 
   // ── Touch interaction (mirrors mouse handlers for mobile) ───────────────────
+  // Return true (allow default) unless actively dragging — p5 registers these
+  // at the document level, so returning false blocks all scroll/tap site-wide.
   p.touchStarted = () => {
     if (mode === 'drag') return false;
     const t = p.touches[0];
-    if (!t) return false;
+    if (!t) return true;
     const sim = c2s(t.x, t.y);
     if (sim.x < GUARD - 0.1 && t.x > 0 && t.x < W && t.y > 0 && t.y < H) {
       dist       = { cx: sim.x, cy: sim.y, angle: 0, s1: 0.3, s2: 0.12 };
       dragOrigin = { x: t.x, y: t.y };
       mode       = 'drag';
+      return false;  // prevent scroll only when starting a canvas drag
     }
-    return false;  // prevent page scroll
+    return true;
   };
 
   p.touchMoved = () => {
-    if (mode !== 'drag' || !dragOrigin) return false;
+    if (mode !== 'drag' || !dragOrigin) return true;  // allow scroll when not dragging
     const t = p.touches[0];
-    if (!t) return false;
+    if (!t) return true;
     const dx  = t.x - dragOrigin.x;
     const dy  = -(t.y - dragOrigin.y);
     const len = Math.sqrt(dx*dx + dy*dy);
@@ -428,11 +431,11 @@ new p5((p) => {
       dist.s1    = Math.max(0.08, len / PPU);
       dist.s2    = dist.s1 * 0.35;
     }
-    return false;  // prevent page scroll
+    return false;  // prevent scroll while actively dragging
   };
 
   p.touchEnded = () => {
-    if (mode !== 'drag') return false;
+    if (mode !== 'drag') return true;
     if (dist && dist.s1 > 0.08) {
       initParts();
       pauseAt = p.millis();
